@@ -8,17 +8,17 @@ namespace Assignment_16
 {
     public class BankAccount
     {
-        private int accountNumber = 1;
- 
+        private int nextAccountNumber = 1;
+
         public int AccountNumber { get; }
         
-        private string AccountHolderName { get; }
+        private string AccountHolderName { get; set; }
 
         private double Balance { get; set; }
 
         public BankAccount(string accountHolderName)
         {
-            AccountNumber = accountNumber++;
+            AccountNumber = nextAccountNumber++;
             AccountHolderName = accountHolderName;
             Balance = 0;
         }
